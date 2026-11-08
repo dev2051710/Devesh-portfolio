@@ -1,2 +1,2 @@
 # Devesh-portfolio
-Personal portfolio website – Devesh Kumar Sah
+Personal portfolio website – Devesh Kumar Sahu
