@@ -85,7 +85,7 @@ footer{text-align:center;padding:10px 0 60px;font-family:var(--mono);font-size:.
 <h1>Hi, I’m<br><span>Devesh</span></h1>
 <p class="lede">I develop Python applications, explore machine learning &amp; build creative digital experiences.</p>
 <p class="note">↳ turning ideas into intelligent solutions.</p>
-<div class="cta"><a href="#work">Explore my work</a><a href="resume.pdf" > view resume</a></div></div>
+<div class="cta"><a href="#work">Explore my work</a><a href="resume.pdf" > View resume</a></div></div>
 <div class="stagew"><div class="stage" aria-hidden="true"><div class="cube"><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div class="cap">FIG. 1 — ISOMETRIC VIEW, NOT TO SCALE</div></div>
 </section>
 
@@ -114,7 +114,24 @@ footer{text-align:center;padding:10px 0 60px;font-family:var(--mono);font-size:.
 <script>
 const $=s=>document.querySelector(s),E=t=>String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;');
 /* ---- Edit here: add real projects as {title, desc, tags:[], link} ---- */
-const PROJECTS=[];
+const PROJECTS=[{
+    title: "campusconnect",
+    desc: "Developed a campus-focused web application for student assignment and event management.<br>Built the application using Next.js, React, TypeScript, and Tailwind CSS.",
+    tags: ["Next.js 15", "React 19", "TypeScript","Tailwind CSS 4","JavaScript tooling / Node.js","React Hook Form","Zod"],
+    link: "https://github.com/dev2051710/campusconnect"
+  },
+  {
+    title: "devKit-developer_toolkit",
+    desc: "Developed an all-in-one developer toolkit featuring eight browser-based utilities to simplify everyday development tasks.<br>Implemented search, favorites, recently used tools, and responsive dashboard navigation.",
+    tags: ["React.js", "Vite", "Tailwind CSS","JavaScript","Browser Local Storage"],
+    link: "https://github.com/dev2051710/devKit-developer_toolkit"
+  },
+  {
+    title: "resumecraft",
+    desc: "Built a resume builder with four customizable templates and a live resume preview.<br>Implemented PDF downloading, autosave, multiple-resume management, and JSON import/export functionality.",
+    tags: ["React.js", "Vite", "Tailwind CSS","JavaScript","Browser Local Storage","JSON"],
+    link: "https://github.com/dev2051710/resumecraft"
+  },];
 $('#pj').innerHTML=PROJECTS.length?'<div class="pg">'+PROJECTS.map(p=>`<a class="pc" href="${E(p.link||'#')}" target="_blank" rel="noopener"><h3>${E(p.title)}</h3><p>${E(p.desc)}</p><small>${(p.tags||[]).map(E).join(' · ')}</small></a>`).join('')+'</div>':'<div class="empty"><span class="stamp">DRAFT</span><h3>Projects coming soon</h3><p>Nothing is drawn here until it is real.</p></div>';
 const S=[['Programming',['Python','C','C++','Core Java']],['Machine Learning',['Machine Learning Fundamentals','Scikit-learn']],['Web',['HTML','CSS']],['Tools',['Git','GitHub','VS Code']],['Creative Software',['AutoCAD','Blender','Adobe After Effects']]];
 $('#bom').innerHTML=S.map(([k,v],i)=>`<tr><td>0${i+1}</td><td>${k}</td><td>${v.map(x=>`<span class="tag">${x}</span>`).join('')}</td></tr>`).join('');
